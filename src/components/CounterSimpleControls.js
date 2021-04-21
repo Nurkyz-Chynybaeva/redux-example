@@ -1,5 +1,5 @@
-import { useDispatch } from "react-redux";
-import { useSelector } from "react-redux";
+import { useDispatch } from "redux";
+
 
 const CounterSimpleControls = () => {
   const dispatch = useDispatch();

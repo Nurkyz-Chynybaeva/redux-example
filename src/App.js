@@ -1,6 +1,4 @@
-
-import './App.css';
-     import { useState } from "react";
+import React from "react";
 import CounterDisplay from "./components/CounterDisplay";
 import CounterSimpleControls from "./components/CounterSimpleControls";
 
