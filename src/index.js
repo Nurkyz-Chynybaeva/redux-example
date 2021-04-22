@@ -3,12 +3,13 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
-import {createStore} from "redux"
-import counterReducer from './redux/reducer';
+import {createStore , combineReducers} from "redux"
+import counterReducer from './redux';
+import colorReducer from './redux/ColorReducer';
 
-const store = createStore(counterReducer);
 
-
+const rootReducer = combineReducers(counterReducer , colorReducer );
+const store = createStore();
 
 
 ReactDOM.render(
@@ -24,7 +25,4 @@ ReactDOM.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
-
-
-
 
