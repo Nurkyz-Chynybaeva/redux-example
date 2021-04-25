@@ -1,23 +1,30 @@
-const { default: ColorDisplay } = require("./components/ColorDisplay");
-const { default: ColorSimpleControls } = require("./components/ColorSimpleControls");
-const { default: CounterAdvancedControls } = require("./components/CounterAdvancedControls");
-const { default: CounterDisplay } = require("./components/CounterDisplay");
-const { default: CounterSimpleControls } = require("./components/CounterSimpleControls");
-const { default: SliderControls } = require("./components/SliderControls");
+import './App.css';
+import ColorDisplay from './components/ColorDisplay';
+import ColorSimple from './components/ColorSimple';
+import CounterAdvancedControls from './components/CounterAdvancedControls';
+import CounterDisplay from './components/CounterDisplay';
+import CounterSimpleControls from './components/CounterSimpleControls';
+import SliderControls from './components/SliderControls';
+import TextDisplay from './components/TextDisplay';
+import TextSimpleComtrols from './components/TextSimpleControls';
 
 function App() {
   return (
     <div className="App">
-     
-     <ColorDisplay/>
-     <ColorSimpleControls/>
-     <SliderControls/>
-     <CounterDisplay/>
-     <CounterSimpleControls/>
-     <CounterAdvancedControls/>
-     
-     
-     
+      <div>
+        <TextDisplay />
+        <TextSimpleComtrols />
+      </div>
+      <div>
+        <ColorDisplay />
+        <ColorSimple />
+        <SliderControls />
+      </div>
+      <div>
+        <CounterDisplay />
+        <CounterSimpleControls />
+        <CounterAdvancedControls />
+      </div>
     </div>
   );
 }
