@@ -5,14 +5,14 @@ import CounterDisplay from './components/CounterDisplay';
 import CounterSimpleControls from './components/CounterSimpleControls';
 import SliderControls from './components/SliderControls';
 import TextDisplay from './components/TextDisplay';
-import TextSimpleComtrols from './components/TextSimpleControls';
+import TextSimpleControls from './components/TextSimpleControls';
 
 function App() {
   return (
     <div className="App">
       <div>
         <TextDisplay />
-        <TextSimpleComtrols />
+        <TextSimpleControls />
       </div>
       <div>
         <ColorDisplay />

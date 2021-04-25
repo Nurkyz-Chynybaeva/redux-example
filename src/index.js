@@ -5,7 +5,7 @@ import App from './App';
 import counterReducers from '../src/redux/counterReducer';
 import colorReduser from '../src/redux/colorReducer';
 import reportWebVitals from './reportWebVitals';
-import { Provider } from 'redux';
+import { Provider } from 'react-redux';
 import textReduser from './redux/textReducer';
 
 const rootReduser = combineReducers({
