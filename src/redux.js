@@ -1,22 +1,38 @@
-
+const redux = require("redux");
+const createStore = redux.createStore;
 const initialState = {
   number: 0,
-}
+};
+
+// Reducer
 const counterReducer = (state = initialState, action) => {
-  const newState = { ...state };
   switch (action.type) {
-    case "set_number":
-      newState.number = action.number;
-      return newState;
-    case "increment_by_1":
+    case 'INCREMENT':
+      const newState = { ...state };
       newState.number++;
       return newState;
-    case "increment_by_10":
-      newState.number += 10;
-      return newState;
-    default:
-      break;
+    case 'DECREMENT':
+      const newState2 = { ...state };
+      newState2.number--;
+      return newState2;
+    case 'INCREMENT_BY_10':
+      const newState3 = { ...state };
+      newState3.number += 10;
+      return newState3;
   }
   return state;
 }
-export default counterReducer;
+
+// Store
+const store = createStore(counterReducer);
+
+// Subscriber
+store.subscribe(() => {
+  console.log(store.getState());
+});
+
+// Action
+const newAction = { type: "INCREMENT" };
+store.dispatch(newAction);
+store.dispatch({ type: "DECREMENT" });
+store.dispatch({ type: "INCREMENT_BY_10" });
