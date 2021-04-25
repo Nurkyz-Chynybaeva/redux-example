@@ -14,6 +14,3 @@ const ColorSimpleControls = () => {
 };
 export default ColorSimpleControls;
 
-
-
-
