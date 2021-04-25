@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux"
 
-const TextSimpleComtrols = () => {
+const TextSimpleControls = () => {
     const dispatch = useDispatch()
 
     function textChangeCallBack({ target }) {
@@ -13,4 +13,4 @@ const TextSimpleComtrols = () => {
     );
 }
  
-export default TextSimpleComtrols;
+export default TextSimpleControls;
