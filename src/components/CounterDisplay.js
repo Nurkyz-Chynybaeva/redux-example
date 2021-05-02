@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 
 const CounterDisplay = () => {
-  const number = useSelector(store.counter.number);
+  const number = useSelector( state => state.counter.number);console.log(number)
   return (
    <div>
      <h1>number</h1>
