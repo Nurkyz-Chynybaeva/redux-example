@@ -5,7 +5,10 @@ const TextDisplay = () => {
     
     return ( 
         <div>
+            
             {text}
+
+            <p>fjeijfei</p>
         </div>
     );
 }

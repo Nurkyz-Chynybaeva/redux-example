@@ -1,19 +1,13 @@
 import React from 'react';
-import { createStore, combineReducers } from 'redux';
 import ReactDOM from 'react-dom';
-import App from './App';
-import counterReducers from '../src/redux/counterReducer';
-import colorReduser from '../src/redux/colorReducer';
-import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
-import textReduser from './redux/textReducer';
+import { createStore, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
+import App from './App';
+import todo from './redux/reducers/todo';
+import reportWebVitals from './reportWebVitals';
 
-const rootReduser = combineReducers({
-   counter: counterReducers, 
-   color: colorReduser,
-   text: textReduser,
-  })
-const store = createStore(rootReduser)
+const store = createStore(todo, applyMiddleware(thunk));
 
 ReactDOM.render(
   <React.StrictMode>
